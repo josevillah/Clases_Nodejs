@@ -1,18 +1,28 @@
 import express from 'express';
 import cors from 'cors';
 import {router} from '../routes/usuarios.js';
+import { connection } from '../database/config.js';
 
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;  
-        this.usuariosPath = '/api'      
+        this.usuariosPath = '/api'     
+        
+        //Conectar a base de datos
+        this.connectDB();
+
         // Midelware
         this.middlewares();
 
         // Rutas de mi app
         this.routes();
+    }
+
+
+    async connectDB(){
+        await connection();
     }
 
     middlewares(){
