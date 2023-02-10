@@ -8,7 +8,7 @@ class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;  
-        this.usuariosPath = '/api'     
+        this.usuariosPath = '/api/usuarios';
         
         //Conectar a base de datos
         this.connectDB();
