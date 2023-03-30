@@ -25,7 +25,7 @@ const sueldos = [
 ];
 
 const getEmpleados = (id) => {
-    const promesa = new Promise( (resolve, reject) => {
+    return promesa = new Promise( (resolve, reject) => {
         const empleado = empleados.find(e => e.id === id)?.nombre
         if(empleado){
             resolve(empleado)
@@ -37,7 +37,7 @@ const getEmpleados = (id) => {
 };
 
 const getSaladio = (id) => {
-    const promesa = new Promise( (resolve, reject) => {
+    return promesa = new Promise( (resolve, reject) => {
         const sueldo = sueldos.find(e => e.id === id)?.sueldo
         if(sueldo){
             resolve(sueldo)
@@ -45,7 +45,6 @@ const getSaladio = (id) => {
             reject(`Error no existe empleado con el id: ${id}`)
         }
     } );
-    return promesa;
 }
 
 const id = 2;
