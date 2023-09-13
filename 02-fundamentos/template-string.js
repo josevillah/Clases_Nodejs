@@ -1,7 +1,7 @@
 const nombre = 'Deadpool';
 const real = 'Wade Winston';
 
-// Esto es lo que comunmente sehace
+// Esto es lo que comunmente se hace
 const normal = nombre +' '+ real;
 console.log(normal);
 
